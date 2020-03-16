@@ -38,16 +38,6 @@ class TicTacToe
     turn_count.even? ? "X" : "O"
   end
 
-  def turn
-    puts "Choose your move wisely (1-9):"
-    user_input = gets.strip
-    index = input_to_index(user_input)
-    if valid_move?(index)
-        piece = current_player
-        move(index, piece)
-    else
-      "Please select a valid choice."
-      turn
-    end
+ 
     display_board
   end
